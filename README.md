@@ -1,5 +1,5 @@
 # sharp-pages
-
+[maket](https://www.figma.com/file/YZxaGBYHrSUHKsUXyEXasj/Design--Landing-Total-Clean?node-id=0-1)
 ## Запуск збірки
 
 Інсталяція залежностей
