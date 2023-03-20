@@ -12,14 +12,6 @@
     font-display: $display;
   }
 }
-/* Usage
-@include font-face ('Acrom', '../fonts/Acrom/Acrom-Thin', 100);
-    */
-
-/* SET REM FUNCTION */
-@function rem($px) {
-  @return ($px / 16) + rem;
-}
 
 /* MEDIA QUERIES*/
 @mixin mq($range) {
@@ -28,7 +20,7 @@
   $desktop: 1280px;
 
   @if $range == mobile-only {
-    @media (max-width: $tablet - 0.02) {
+    @media (max-width: ($tablet - 0.02)) {
       @content;
     }
   } @else if $range == mobile {
@@ -62,10 +54,3 @@
     }
   }
 }
-/*  Usage
-.block {
-    @include mq(mobile) {
-        margin-bottom: 16px;
-    };
-  }
-*/
