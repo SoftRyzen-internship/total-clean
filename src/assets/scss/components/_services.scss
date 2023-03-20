@@ -83,17 +83,17 @@
 }
 
 .services__bgcard2 {
-  bottom: 54px;
+  bottom: 96px;
   left: 0%;
   transform: translateX(0%);
 
-  width: 206px;
-  height: 155px;
+  width: 150px;
+  height: 110px;
   background-image: url('../../../assets/images/triangle.png');
   background-position-y: 0px;
 
   .services__item.clicked & {
-    transform: translateX(0%) scale(3.8);
+    transform: translateX(0%) scale(5);
     transform-origin: center left;
   }
 }
@@ -114,8 +114,11 @@
 }
 
 .services__bgcard4 {
-  left: 100%;
-  transform: translateX(-100%);
+  width: 221px;
+  height: 221px;
+
+  left: 115%;
+  transform: translateX(-115%);
   background-image: radial-gradient(
     circle,
     var(--secondary-accent-cl),
@@ -136,4 +139,29 @@
 }
 .services__item--brown {
   background-color: var(--cleaning-bg);
+}
+
+.services__image {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+
+.services__image--sprayer {
+  left: 18%;
+  transform: translateX(0%);
+}
+
+.services__image--roller {
+  bottom: 13px;
+  left: 0%;
+  transform: translateX(0%);
+}
+
+.services__image--chair {
+  // bottom: 14px;
+  left: 57px;
+  transform: translateX(0%);
 }
