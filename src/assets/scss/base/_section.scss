@@ -1,11 +1,11 @@
 .section {
-  padding-bottom: 40px;
+  margin-bottom: 40px;
 
   @include mq(tablet) {
-    padding-bottom: 60px;
+    margin-bottom: 60px;
   }
 
   @include mq(desktop) {
-    padding-bottom: 80px;
+    margin-bottom: 80px;
   }
 }
