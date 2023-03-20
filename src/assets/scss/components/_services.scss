@@ -1,0 +1,139 @@
+.services__title {
+  display: block;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.services__item {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  height: 312px;
+  flex-direction: column;
+  border-radius: 20px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.services__item:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+.services__item-text-wrapper {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.services__arrow-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--accent-cl);
+  cursor: pointer;
+}
+
+.services__arrow-icon {
+  fill: var(--white);
+}
+
+.services__text {
+  width: 195px;
+  font-weight: 600;
+  line-height: 1.44;
+}
+
+.services__bgcard1,
+.services__bgcard2,
+.services__bgcard3,
+.services__bgcard4 {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+
+  width: 198px;
+  height: 198px;
+  background-image: radial-gradient(
+    circle,
+    var(--accent-cl),
+    var(--accent-cl) 66%,
+    transparent 66%
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: 21px;
+  transition: all 0.3s ease-in-out;
+  transform-origin: center;
+
+  .services__item.clicked & {
+    transform: translateX(-50%) scale(2.5);
+    transform-origin: bottom;
+  }
+}
+
+.services__bgcard2 {
+  bottom: 54px;
+  left: 0%;
+  transform: translateX(0%);
+
+  width: 206px;
+  height: 155px;
+  background-image: url('../../../assets/images/triangle.png');
+  background-position-y: 0px;
+
+  .services__item.clicked & {
+    transform: translateX(0%) scale(3.8);
+    transform-origin: center left;
+  }
+}
+
+.services__bgcard3 {
+  bottom: 30px;
+  left: 100%;
+  transform: translateX(-100%);
+
+  width: 50px;
+  height: 50px;
+  background-position-y: 0px;
+
+  .services__item.clicked & {
+    transform: translateX(-100%) scale(15);
+    transform-origin: center;
+  }
+}
+
+.services__bgcard4 {
+  left: 100%;
+  transform: translateX(-100%);
+  background-image: radial-gradient(
+    circle,
+    var(--secondary-accent-cl),
+    var(--secondary-accent-cl) 66%,
+    transparent 66%
+  );
+  background-position-x: 31px;
+  background-position-y: 25px;
+
+  .services__item.clicked & {
+    transform: translateX(-100%) scale(5);
+    transform-origin: center;
+  }
+}
+
+.services__item--blue {
+  background-color: var(--secondary-accent-cl);
+}
+.services__item--brown {
+  background-color: var(--cleaning-bg);
+}

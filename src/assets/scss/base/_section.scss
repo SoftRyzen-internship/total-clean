@@ -1,5 +1,6 @@
 .section {
   margin-bottom: 40px;
+  border: 1px solid red;
 
   @include mq(tablet) {
     margin-bottom: 60px;
