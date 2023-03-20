@@ -83,6 +83,8 @@ button {
 }
 
 .section-title {
+  display: inline-block;
+
   font-family: var(--title-font);
 
   font-size: 24px;
@@ -104,7 +106,7 @@ button {
       width: 40px;
       height: 40px;
 
-      background-image: url('../../assets/images/sprite.svg#icon-stars');
+      background-image: url('../../assets/images/stars.svg');
       background-repeat: no-repeat;
     }
   }
