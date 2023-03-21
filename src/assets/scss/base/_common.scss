@@ -88,18 +88,17 @@ button {
   color: var(--primary-txt-cl);
 
   @include mq(tablet) {
-    position: relative;
+    display: flex;
+    align-items: flex-end;
+
     font-size: 36px;
     line-height: 1.11;
 
     &::after {
       content: '';
-      position: absolute;
-      top: -40px;
-      right: -40px;
-      display: block;
+      position: relative;
       width: 40px;
-      height: 40px;
+      height: 80px;
 
       background-image: url('../../assets/images/stars.svg');
       background-repeat: no-repeat;
