@@ -1,2 +1,21 @@
-<header class="header"></header>
-{% include 'components/mobile-menu.html' %}
+<header class="header container">
+  <a href="#" class="logo">
+    <svg class="logo-img" width="44px" height="39px">
+      <use href="../../assets/images/sprite.svg#icon-logo"></use>
+    </svg>
+    total clean
+  </a>
+  {% include 'components/nav-menu.html' %}
+  <a class="phone" href="tel: +44 77 7170 3529">
+    <svg class="phone-img" width="24px" height="24px">
+      <use href="../../assets/images/sprite.svg#icon-phone"></use>
+    </svg>
+    +44 77 7170 3529
+  </a>
+  <button class="burger-menu" type="button" data-burger-menu>
+    <svg width="32px" height="32px">
+      <use href="../../assets/images/sprite.svg#icon-burger"></use>
+    </svg>
+  </button>
+  {% include 'components/mobile-menu.html' %}
+</header>
