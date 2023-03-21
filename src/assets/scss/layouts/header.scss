@@ -1,0 +1,30 @@
+.header {
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-weight: 500;
+
+  color: var(--primary-txt-cl);
+}
+
+.header > .phone {
+  display: none;
+
+  @include mq(desktop) {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+  }
+}
+
+.burger-menu{
+  line-height: 1;
+
+  @include mq(desktop) {
+    display: none;
+  }
+}
