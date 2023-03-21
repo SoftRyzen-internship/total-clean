@@ -3,12 +3,12 @@
   padding-bottom: 40px;
   background-color: var(--secondary-bg);
 
-  @include mq(tablet){
+  @include mq(tablet) {
     padding-top: 60px;
     padding-bottom: 60px;
   }
 
-  @include mq(desktop){
+  @include mq(desktop) {
     padding-top: 80px;
     padding-bottom: 80px;
   }
@@ -19,11 +19,11 @@
     align-items: center;
     gap: 24px;
 
-    @include mq(tablet){
+    @include mq(tablet) {
       gap: 40px;
     }
 
-    @include mq(desktop){
+    @include mq(desktop) {
       gap: 60px;
     }
   }
@@ -35,13 +35,13 @@
     font-weight: 500;
     text-align: center;
 
-    @include mq(tablet){
+    @include mq(tablet) {
       margin-top: -18px;
       max-width: 415px;
       font-size: 18px;
     }
 
-    @include mq(desktop){
+    @include mq(desktop) {
       margin-top: -28px;
       max-width: 567px;
       font-size: 22px;
@@ -82,7 +82,7 @@
   }
 }
 
-.advantages-item::before{
+.advantages-item::before {
   content: '';
   display: inline-flex;
   min-width: 74px;
@@ -120,4 +120,3 @@
 .advantages-item:nth-child(6)::before {
   background-image: url('../../assets/images/advantages/calendar.svg');
 }
-
