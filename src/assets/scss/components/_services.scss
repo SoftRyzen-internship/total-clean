@@ -97,7 +97,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position-y: 21px;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s linear;
   transform-origin: center;
 
   @include mq(tablet) {
@@ -249,7 +249,7 @@
 
   @include mq(tablet) {
     bottom: 13px;
-    right: 60px;
+    right: 35px;
     width: 189px;
     height: 197px;
   }
