@@ -4,6 +4,15 @@
   text-align: center;
 }
 
+.services__list {
+  @include mq(tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * 32px);
+    margin-left: calc(-1 * 32px);
+  }
+}
+
 .services__item {
   position: relative;
 
@@ -14,17 +23,32 @@
   border-radius: 20px;
   cursor: pointer;
   overflow: hidden;
+
+  @include mq(tablet) {
+    height: 334px;
+    margin-top: 32px;
+    margin-left: 32px;
+    flex-basis: calc(100% / 2 - 32px);
+  }
+  @include mq(desktop) {
+    height: 368px;
+    flex-basis: calc(100% / 4 - 32px);
+  }
 }
 
 .services__item:not(:last-child) {
   margin-bottom: 24px;
+
+  @include mq(tablet) {
+    margin-bottom: 0;
+  }
 }
 
 .services__item-text-wrapper {
   position: absolute;
   top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 20px;
+  right: 20px;
   z-index: 2;
 
   display: flex;
@@ -47,7 +71,7 @@
 }
 
 .services__text {
-  width: 195px;
+  width: 166px;
   font-weight: 600;
   line-height: 1.44;
 }
@@ -76,30 +100,45 @@
   transition: all 0.3s ease-in-out;
   transform-origin: center;
 
+  @include mq(tablet) {
+    width: 221px;
+    height: 221px;
+  }
+  @include mq(desktop) {
+    width: 186px;
+    height: 186px;
+    background-position-y: 8px;
+  }
+
   .services__item.clicked & {
-    transform: translateX(-50%) scale(2.5);
+    transform: translateX(-50%) scale(8);
     transform-origin: bottom;
   }
 }
 
 .services__bgcard2 {
-  bottom: 96px;
+  bottom: 80px;
   left: 0%;
   transform: translateX(0%);
 
-  width: 150px;
-  height: 110px;
-  background-image: url('../../../assets/images/triangle.png');
+  width: 60px;
+  height: 60px;
+  background-image: radial-gradient(
+    circle,
+    var(--secondary-accent-cl),
+    var(--secondary-accent-cl) 66%,
+    transparent 66%
+  );
   background-position-y: 0px;
 
   .services__item.clicked & {
-    transform: translateX(0%) scale(5);
-    transform-origin: center left;
+    transform: translateX(0%) scale(15);
+    transform-origin: center;
   }
 }
 
 .services__bgcard3 {
-  bottom: 30px;
+  bottom: 35px;
   left: 100%;
   transform: translateX(-100%);
 
@@ -108,14 +147,14 @@
   background-position-y: 0px;
 
   .services__item.clicked & {
-    transform: translateX(-100%) scale(15);
+    transform: translateX(-100%) scale(18);
     transform-origin: center;
   }
 }
 
 .services__bgcard4 {
-  width: 221px;
-  height: 221px;
+  width: 241px;
+  height: 241px;
 
   left: 115%;
   transform: translateX(-115%);
@@ -125,8 +164,15 @@
     var(--secondary-accent-cl) 66%,
     transparent 66%
   );
-  background-position-x: 31px;
-  background-position-y: 25px;
+  background-position-x: 38px;
+  background-position-y: 35px;
+
+  @include mq(tablet) {
+    width: 270px;
+    height: 270px;
+    background-position-x: 42px;
+    background-position-y: 53px;
+  }
 
   .services__item.clicked & {
     transform: translateX(-100%) scale(5);
@@ -143,25 +189,74 @@
 
 .services__image {
   position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
   z-index: 3;
 }
 
+.services__image--girl {
+  bottom: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 131px;
+  height: 200px;
+
+  @include mq(tablet) {
+    width: 141px;
+    height: 214px;
+  }
+  @include mq(desktop) {
+    width: 139px;
+    height: 211px;
+  }
+}
+
 .services__image--sprayer {
-  left: 18%;
-  transform: translateX(0%);
+  bottom: 0;
+  left: 0;
+
+  @include mq(tablet) {
+    width: 334px;
+    height: 219px;
+  }
+  @include mq(desktop) {
+    bottom: 22px;
+    width: 280px;
+    height: 200px;
+  }
 }
 
 .services__image--roller {
   bottom: 13px;
-  left: 0%;
-  transform: translateX(0%);
+  right: 0;
+  width: 272px;
+  height: 154px;
+
+  @include mq(tablet) {
+    width: 334px;
+    height: 163px;
+  }
+  @include mq(desktop) {
+    bottom: 26px;
+    width: 280px;
+    height: 163px;
+  }
 }
 
 .services__image--chair {
-  // bottom: 14px;
-  left: 57px;
-  transform: translateX(0%);
+  bottom: 14px;
+  right: 45px;
+  width: 171px;
+  height: 178px;
+
+  @include mq(tablet) {
+    bottom: 13px;
+    right: 60px;
+    width: 189px;
+    height: 197px;
+  }
+  @include mq(desktop) {
+    bottom: 14px;
+    right: 12px;
+    width: 183px;
+    height: 191px;
+  }
 }
