@@ -24,6 +24,8 @@
 .burger-menu{
   line-height: 1;
 
+  transition: opacity var(--slow) linear;
+
   @include mq(desktop) {
     display: none;
   }
