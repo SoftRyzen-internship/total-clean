@@ -4,6 +4,7 @@ const closeBtn = document.querySelector('[data-close]');
 
 burgerBtn.addEventListener('click', e => {
   mobileMenu.style.transform = 'translateX(0)';
+  burgerBtn.style.opacity = 0;
 });
 
 mobileMenu.addEventListener('click', e => {
@@ -11,5 +12,6 @@ mobileMenu.addEventListener('click', e => {
 
   if (tagName !== 'DIV' && tagName !== 'UL' && tagName !== 'NAV') {
     mobileMenu.style.transform = 'translateX(100%)';
+    burgerBtn.style.opacity = 1;
   }
 });
