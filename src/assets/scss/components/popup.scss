@@ -29,7 +29,7 @@
   transform: translate(-50%, -50%) scale(1);
 
   padding: 16px;
-  min-width: 272px;
+  max-width: 272px;
 
   background-image: linear-gradient(
     to bottom,
@@ -49,7 +49,7 @@
 
   @include mq(tablet) {
     padding: 24px;
-    min-width: 618px;
+    max-width: 618px;
     background-image: linear-gradient(
       to bottom,
       var(--secondary-accent-cl) 256px,
