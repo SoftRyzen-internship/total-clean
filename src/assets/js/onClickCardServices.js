@@ -17,7 +17,6 @@ function toggleModal() {
   document.body.classList.toggle('scroll-hidden');
   refs.modal.classList.toggle('is-hidden');
   refs.modalWindow.classList.toggle('is-hidden');
-  s;
 }
 
 function handleKey(e) {

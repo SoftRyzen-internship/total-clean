@@ -1,5 +1,5 @@
 const form = document.getElementById('form');
-const sendBtn = document.querySelector('.send__btn');
+const sendBtn = document.querySelector('.contact__send-btn');
 
 const username = document.getElementById('name');
 const phone = document.getElementById('telephone');
@@ -126,7 +126,7 @@ const setErrorFor = (input, message) => {
   errorText.innerText = message;
 
   //add error class
-  formControl.className = 'form-control error';
+  formControl.className = 'contact__form-control error';
 };
 
 // SET CLASSNAME FOR SUCCESS
@@ -134,5 +134,5 @@ const setSuccessFor = input => {
   const formControl = input.parentElement;
 
   //add success class
-  formControl.className = 'form-control success';
+  formControl.className = 'contact__form-control success';
 };

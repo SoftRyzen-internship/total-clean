@@ -1,81 +1,79 @@
 <section class="section contact">
   <div class="contact__container container">
-    <h2 class="section-title contact-title">Let’s get in touch</h2>
-    <p class="section-subtitle contact-subtitle">
-      Fill the form and we will reach you within 24 business hours
-    </p>
-    <form class="contact-form" action="#" id="form">
-      <div class="form-control form-control--name">
-        <svg class="icon-mail" aria-label="Mail Icon" width="20" height="20">
-          <use href="assets/images/sprite.svg#icon-mail"></use>
-        </svg>
-        <label for="name" class="contact-form-label">Name*</label>
-        <input
-          class="contact-form-input"
-          placeholder="Devid Jhon"
-          id="name"
-          type="text"
-          name="name"
-          required
-        />
-        <span>Error message</span>
-      </div>
-
-      <div class="form-control">
-        <svg class="icon-phone" aria-label="phone icon" width="20" height="20">
-          <use href="assets/images/sprite.svg#icon-phone"></use>
-        </svg>
-        <label for="telephone" class="contact-form-label">Phone*</label>
-        <input
-          class="contact-form-input"
-          placeholder="+44"
-          id="telephone"
-          type="tel"
-          name="telephone"
-          required
-        />
-        <span>Error message</span>
-      </div>
-
-      <div class="form-control">
-        <svg class="icon-edit" aria-label="edit icon" width="20" height="20">
-          <use href="assets/images/sprite.svg#icon-edit"></use>
-        </svg>
-        <label for="message" class="contact-form-label">Message</label>
-        <textarea
-          class="contact-form-input contact-form-input--message"
-          placeholder="Type your message"
-          id="message"
-          type="text"
-          name="message"
-        ></textarea>
-      </div>
-
-      <div class="send-btn-wrapper">
-        <button class="accent-btn send__btn" type="submit">Send</button>
-      </div>
-    </form>
-
-    <div class="contact__list-wrapper">
-      <h2 class="section-title">Our Contacts</h2>
-      <ul class="contact__list">
-        <li class="contact__item">
-          <svg class="contact__icon" aria-label="location icon" width="24" height="24">
-            <use href="assets/images/sprite.svg#icon-location"></use>
-          </svg>
-          <a href="" class="contact__link">ul. Sawickiej Hanki 54, Świętochłowice 41–605</a>
-        </li>
-        <li class="contact__item">
-          <svg class="contact__icon" data-modal-close aria-label="Mail Icon" width="24" height="24">
+    <div>
+      <h2 class="section-title contact__title">Let’s get in touch</h2>
+      <p class="contact__subtitle">Fill the form and we will reach you within 24 business hours</p>
+      <form class="contact__form" action="#" id="form">
+        <div class="contact__form-control contact__form-control--name">
+          <svg class="contact__icon-mail" aria-label="Mail Icon" width="20" height="20">
             <use href="assets/images/sprite.svg#icon-mail"></use>
           </svg>
-          <a href="" class="contact__link">tienlapspktnd@gmail.<br />com</a>
-        </li>
-        <li class="contact__item">
-          <svg class="contact__icon" aria-label="location icon" width="24" height="24">
+          <label for="name" class="contact__form-label">Name*</label>
+          <input
+            class="contact__form-input"
+            placeholder="Devid Jhon"
+            id="name"
+            type="text"
+            name="name"
+            required
+          />
+          <span>Error message</span>
+        </div>
+
+        <div class="contact__form-control">
+          <svg class="contact__icon-phone" aria-label="phone icon" width="20" height="20">
             <use href="assets/images/sprite.svg#icon-phone"></use>
           </svg>
-          <a href="" class="contact__link">ul. Sawickiej Hanki 54, Świętochłowice 41–605</a>
+          <label for="telephone" class="contact__form-label">Phone Number*</label>
+          <input
+            class="contact__form-input"
+            placeholder="+44"
+            id="telephone"
+            type="tel"
+            name="telephone"
+            required
+          />
+          <span>Error message</span>
+        </div>
+
+        <div class="contact__form-control">
+          <svg class="contact__icon-edit" aria-label="edit icon" width="20" height="20">
+            <use href="assets/images/sprite.svg#icon-edit"></use>
+          </svg>
+          <label for="message" class="contact__form-label">Message</label>
+          <textarea
+            class="contact__form-input contact__form-input--message"
+            placeholder="Type your message"
+            id="message"
+            type="text"
+            name="message"
+          ></textarea>
+        </div>
+
+        <button class="accent-btn contact__send-btn" type="submit">Send</button>
+      </form>
+    </div>
+
+    <div class="contact-list__wrapper">
+      <h2 class="section-title contact-list__title">Our Contacts</h2>
+      <ul class="contact-list">
+        <li class="contact-list__item">
+          <svg class="contact-list__icon" aria-label="Location Icon" width="24" height="24">
+            <use href="assets/images/sprite.svg#icon-location"></use>
+          </svg>
+          <a href="" class="contact-list__link">ul. Sawickiej Hanki 54, Świętochłowice 41–605</a>
+        </li>
+        <li class="contact-list__item">
+          <svg class="contact-list__icon" aria-label="Mail Icon" width="24" height="24">
+            <use href="assets/images/sprite.svg#icon-mail"></use>
+          </svg>
+          <a href="" class="contact-list__link">tienlapspktnd@gmail.com</a>
+        </li>
+        <li class="contact-list__item">
+          <svg class="contact-list__icon" aria-label="Phone Icon" width="24" height="24">
+            <use href="assets/images/sprite.svg#icon-phone"></use>
+          </svg>
+          <a href="" class="contact-list__link">+44 77 7170 3529</a>
         </li>
       </ul>
       <div class="after"></div>
