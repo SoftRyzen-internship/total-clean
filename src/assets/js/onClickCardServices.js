@@ -6,6 +6,7 @@ const refs = {
   closeModalBtn: document.querySelector('[data-modal-close]'),
   modal: document.querySelector('[data-modal]'),
   modalWindow: document.querySelector('.modal'),
+  modalBtn: document.querySelector('.modal__button'),
   content: document.querySelector('.modal-content'),
   card1: document.getElementById('card1'),
   card2: document.getElementById('card2'),
@@ -20,13 +21,16 @@ function toggleModal() {
 }
 
 function handleKey(e) {
-  if (e.code !== 'Escape') return;
-  refs.card1.classList.remove('clicked');
-  refs.card2.classList.remove('clicked');
-  refs.card3.classList.remove('clicked');
-  refs.card4.classList.remove('clicked');
+  if (e.code === 'Escape' && !refs.modalWindow.classList.contains('is-hidden')) {
+    toggleModal();
 
-  toggleModal();
+    refs.card1.classList.remove('clicked');
+    refs.card2.classList.remove('clicked');
+    refs.card3.classList.remove('clicked');
+    refs.card4.classList.remove('clicked');
+  }
+
+  return;
 }
 
 function handleClose(e) {
@@ -75,3 +79,4 @@ refs.card4.addEventListener('click', () => {
 document.addEventListener('keydown', handleKey);
 refs.backdrop.addEventListener('mousedown', handleClose);
 refs.closeModalBtn.addEventListener('click', onClickButtonCloseModal);
+refs.modalBtn.addEventListener('click', () => toggleModal());

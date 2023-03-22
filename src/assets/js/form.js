@@ -1,3 +1,5 @@
+import { togglePopup } from './popup';
+
 const form = document.getElementById('form');
 const sendBtn = document.querySelector('.contact__send-btn');
 
@@ -11,12 +13,6 @@ const isValidValues = {
   name: false,
   phone: false,
 };
-
-// скидаємо значення isValidValues
-sendBtn.addEventListener('click', () => {
-  isValidValues.name = false;
-  isValidValues.phone = false;
-});
 
 form.addEventListener('input', e => {
   if (e.target.id === 'name') {
@@ -52,9 +48,12 @@ form.addEventListener('input', e => {
 form.addEventListener('submit', e => {
   e.preventDefault();
 
-  // REMOVE DISABLED BUTTON
   if (isValidValues.name === true && isValidValues.phone === true) {
     e.currentTarget.reset();
+    togglePopup();
+
+    isValidValues.name = false;
+    isValidValues.phone = false;
   }
 });
 
@@ -102,7 +101,7 @@ const checkInputPhone = phoneInput => {
     //Add error class
     setErrorFor(phone, 'Error(field is required)');
   } else if (!phoneValue.startsWith('+44')) {
-    setErrorFor(phone, 'Error(start with "+44)');
+    setErrorFor(phone, 'Error(start with +44)');
   } else if (phoneValue.length < 13 || phoneValue.length >= 14) {
     setErrorFor(phone, 'Error(only 12 numbers)');
   } else if (!phoneValue.match(re)) {
