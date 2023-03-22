@@ -1,0 +1,139 @@
+.popup__backdrop {
+  visibility: visible;
+  opacity: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(34, 44, 48, 0.4);
+  backdrop-filter: blur(2px);
+  z-index: 100;
+  overflow: auto;
+  transition: opacity 0.2s;
+
+  &.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.popup {
+  visibility: visible;
+  opacity: 1;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+
+  padding: 16px;
+  min-width: 272px;
+
+  background-image: linear-gradient(
+    to bottom,
+    var(--secondary-accent-cl) 182px,
+    var(--white) 182px,
+    var(--white) 100%
+  );
+  border-radius: 20px;
+
+  transition: transform 0.3s linear 0.2s;
+
+  &.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  @include mq(tablet) {
+    padding: 24px;
+    min-width: 618px;
+    background-image: linear-gradient(
+      to bottom,
+      var(--secondary-accent-cl) 256px,
+      var(--white) 256px,
+      var(--white) 100%
+    );
+  }
+
+  .is-hidden & {
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+}
+
+.popup-content::before {
+  content: '';
+  display: block;
+  margin: 0 auto;
+  margin-top: 28px;
+  margin-bottom: 88px;
+  width: 91px;
+  height: 94px;
+  background-image: url(../../assets/images/contacts/check.svg);
+  background-size: contain;
+
+  @include mq(tablet) {
+    width: 140px;
+    height: 145px;
+    margin-top: 32px;
+    margin-bottom: 115px;
+  }
+}
+
+.popup__close-icon {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  stroke: var(--primary-txt-cl);
+  fill: var(--white);
+
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    stroke: var(--accent-cl);
+  }
+
+  @include mq(tablet) {
+    width: 32px;
+    height: 32px;
+    right: 24px;
+    top: 24px;
+  }
+}
+
+.popup__title {
+  display: block;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.popup__subtitle {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+
+  @include mq(tablet) {
+    margin-bottom: 32px;
+    font-size: 18px;
+    line-height: 1.56;
+  }
+}
+
+.popup__btn {
+  padding: 16px 98.5px;
+  margin: 0 auto;
+  margin-top: 24px;
+
+  @include mq(tablet) {
+    padding: 18px 98.5px;
+    margin-top: 40px;
+  }
+}

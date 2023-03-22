@@ -2,66 +2,100 @@
   padding-top: 40px;
   background-image: linear-gradient(
     to bottom,
-    var(--secondary-accent-cl) 50%,
-    var(--white) 50%,
+    var(--secondary-accent-cl) 60%,
+    var(--white) 60%,
     var(--white) 100%
   );
+
+  @include mq(desktop) {
+    padding-top: 80px;
+    background-image: linear-gradient(
+      to bottom,
+      var(--secondary-accent-cl) 72%,
+      var(--white) 72%,
+      var(--white) 100%
+    );
+  }
 }
 
 .contact__container {
-  width: 272px;
+  max-width: 272px;
   padding: 24px 12px;
   border: 1px solid var(--subtitle-txt-cl);
   border-radius: 20px;
   background-color: var(--white);
+
+  @include mq(tablet) {
+    max-width: 570px;
+    padding: 40px 39px;
+  }
+
+  @include mq(desktop) {
+    display: flex;
+    flex-direction: row-reverse;
+    min-width: 947px;
+    padding: 40px;
+  }
 }
 
-.contact-title,
-.contact-subtitle {
-  text-align-last: left;
+.contact__title,
+.contact__subtitle {
+  text-align: left;
   margin-bottom: 16px;
+
+  @include mq(tablet) {
+    width: 100%;
+    justify-content: center;
+  }
 }
 
-.contact-title {
-  margin-bottom: 16px;
+.contact__title {
+  @include mq(tablet) {
+    margin-bottom: 24px;
+  }
+  @include mq(desktop) {
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 32px;
+    margin-bottom: 24px;
+    height: 40px;
+  }
 }
 
-.send-btn-wrapper {
-  width: 100%;
-  display: flex;
-  justify-content: center;
+.contact__subtitle {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+
+  @include mq(tablet) {
+    margin-bottom: 32px;
+    font-size: 18px;
+    line-height: 1.56;
+  }
 }
 
-.send__btn {
+.contact__send-btn {
   padding: 16px 105px;
+  margin: 0 auto;
   margin-top: 24px;
 
   @include mq(tablet) {
-    // padding: 19.5px 81px;
-    // margin-top: 52px;
+    padding: 18px 101px;
+    margin-top: 40px;
+  }
+
+  &:disabled {
+    background-color: var(--disabled-btn);
   }
 }
 
-.send__btn:disabled {
-  background-color: var(--disabled-btn);
-}
-
-.form-control {
+.contact__form-control {
   position: relative;
-  @include mq(tablet) {
-  }
 }
 
-.form-control--name {
-  margin-top: 16px;
-  @include mq(tablet) {
-    margin-top: 42px;
-  }
-}
-
-.icon-mail,
-.icon-phone,
-.icon-edit {
+.contact__icon-mail,
+.contact__icon-phone,
+.contact__icon-edit {
   position: absolute;
   top: 42px;
   left: 18px;
@@ -69,7 +103,7 @@
   stroke: var(--copyright-txt-cl);
 }
 
-.contact-form-input {
+.contact__form-input {
   padding: 12px 18px 12px 46px;
   width: 100%;
   height: 48px;
@@ -78,54 +112,42 @@
   background-color: transparent;
   outline: none;
 
-  font-size: 16px;
-  line-height: 1.5;
-  color: var(--primary-txt-cl);
-
-  @include mq(tablet) {
-    // padding-top: 15px;
-    // padding-bottom: 15px;
-    // height: 50px;
-
-    // font-size: 16px;
-    // line-height: 1.3;
-  }
-}
-
-.contact-form-input:focus {
-  border-color: var(--accent-cl);
-}
-
-.contact-form-input::placeholder,
-.contact-form-input--message::placeholder {
-  font-size: 16px;
-  line-height: 1.5;
-  color: var(--copyright-txt-cl);
-}
-
-.contact-form-input--message {
-  height: 144px;
-  resize: none;
-}
-
-.contact-form-label {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   color: var(--primary-txt-cl);
 
-  @include mq(tablet) {
-    // font-size: 16px;
-    // line-height: 1.25;
+  &:focus {
+    border-color: var(--accent-cl);
+  }
+
+  &--message {
+    height: 144px;
+    resize: none;
+  }
+
+  &::placeholder,
+  &--message::placeholder {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--copyright-txt-cl);
   }
 }
 
+.contact__form-label {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--primary-txt-cl);
+}
+
 // FORM VALIDATION
-.form-control span {
+.contact__form-control span {
   visibility: hidden;
 }
 
-.form-control.error span {
+.contact__form-control.error span {
   visibility: visible;
   display: block;
   width: 303px;
@@ -141,30 +163,41 @@
   }
 }
 
-.form-control.success input {
+.contact__form-control.success input {
   border-color: var(--grey-txt);
   color: var(--black-txt);
 }
 
-.form-control.error input {
+.contact__form-control.error input {
   border-color: #f87171;
   color: #f87171;
 }
 
-.form-control.success input {
+.contact__form-control.success input {
   border-color: var(--accent-cl);
 }
 
 // CONTACTS
-
-.contact__list-wrapper {
+.contact-list__wrapper {
   margin-top: 24px;
   padding: 24px 12px;
   border-radius: 10px;
   background-color: var(--secondary-accent-cl);
+
+  @include mq(tablet) {
+    position: relative;
+    margin-top: 40px;
+    padding: 24px 24px 30px 24px;
+  }
+  @include mq(desktop) {
+    max-width: 345px;
+    margin-right: 28px;
+    margin-top: 0;
+    padding: 32px;
+  }
 }
 
-.contact__list::after {
+.contact-list::after {
   content: '';
   display: block;
   margin: 0 auto;
@@ -175,27 +208,64 @@
   background-repeat: no-repeat;
   background-position: center;
   background-image: url(../../assets/images/contacts/letter.svg);
+
+  @include mq(tablet) {
+    position: absolute;
+    bottom: 22px;
+    right: 24px;
+    margin-top: 0;
+  }
+  @include mq(desktop) {
+    bottom: 32px;
+    right: 50%;
+    transform: translateX(50%);
+    width: 267px;
+    height: 232px;
+    background-size: contain;
+  }
 }
 
-.contact__item {
+.contact-list__title {
+  display: block;
+  margin-bottom: 16px;
+  @include mq(tablet) {
+    margin-bottom: 24px;
+  }
+}
+
+.contact-list__item {
   display: flex;
   align-items: center;
+
+  &:not(:last-of-type) {
+    margin-bottom: 16px;
+    @include mq(tablet) {
+      margin-bottom: 24px;
+    }
+    @include mq(desktop) {
+      margin-bottom: 18px;
+    }
+  }
 }
 
-.contact__item:not(:last-of-type) {
-  margin-bottom: 16px;
-}
-
-.contact__link {
+.contact-list__link {
   width: 188px;
   margin-left: 12px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   color: var(--primary-txt-cl);
+
+  @include mq(tablet) {
+    width: 100%;
+  }
+  @include mq(tablet) {
+    font-size: 18px;
+    line-height: 1.56;
+  }
 }
 
-.contact__icon {
+.contact-list__icon {
   stroke: var(--subtitle-txt-cl);
   cursor: pointer;
 }
