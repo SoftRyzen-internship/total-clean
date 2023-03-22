@@ -1,6 +1,15 @@
 .services__title {
+  width: 100%;
   margin-bottom: 24px;
   text-align: center;
+
+  @include mq(tablet) {
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+  @include mq(desktop) {
+    margin-bottom: 50px;
+  }
 }
 
 .services__list {
@@ -23,6 +32,14 @@
   cursor: pointer;
   overflow: hidden;
 
+  &:not(:last-child) {
+    margin-bottom: 24px;
+
+    @include mq(tablet) {
+      margin-bottom: 0;
+    }
+  }
+
   @include mq(tablet) {
     height: 334px;
     margin-top: 32px;
@@ -32,14 +49,6 @@
   @include mq(desktop) {
     height: 368px;
     flex-basis: calc(100% / 4 - 32px);
-  }
-}
-
-.services__item:not(:last-child) {
-  margin-bottom: 24px;
-
-  @include mq(tablet) {
-    margin-bottom: 0;
   }
 }
 
@@ -63,6 +72,11 @@
   border-radius: 50%;
   background-color: var(--accent-cl);
   cursor: pointer;
+
+  @include mq(tablet) {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .services__arrow-icon {
@@ -72,7 +86,29 @@
 .services__text {
   width: 166px;
   font-weight: 600;
+  font-size: 18px;
   line-height: 1.44;
+  &--card2,
+  &--card3,
+  &--card4 {
+    width: 200px;
+  }
+
+  @include mq(tablet) {
+    width: 260px;
+    font-size: 24px;
+    line-height: 1.25;
+  }
+  @include mq(desktop) {
+    width: 200px;
+    font-size: 24px;
+    line-height: 1.25;
+    &--card2,
+    &--card3,
+    &--card4 {
+      width: 180px;
+    }
+  }
 }
 
 .services__bgcard1,
@@ -85,8 +121,8 @@
   transform: translateX(-50%);
   z-index: 1;
 
-  width: 198px;
-  height: 198px;
+  width: 210px;
+  height: 210px;
   background-image: radial-gradient(
     circle,
     var(--accent-cl),
@@ -189,73 +225,73 @@
 .services__image {
   position: absolute;
   z-index: 3;
-}
 
-.services__image--girl {
-  bottom: -1px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 131px;
-  height: 200px;
-
-  @include mq(tablet) {
-    width: 141px;
-    height: 214px;
-  }
-  @include mq(desktop) {
-    width: 139px;
-    height: 211px;
-  }
-}
-
-.services__image--sprayer {
-  bottom: 0;
-  left: 0;
-
-  @include mq(tablet) {
-    width: 334px;
-    height: 219px;
-  }
-  @include mq(desktop) {
-    bottom: 22px;
-    width: 280px;
+  &--girl {
+    bottom: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 131px;
     height: 200px;
+
+    @include mq(tablet) {
+      width: 141px;
+      height: 214px;
+    }
+    @include mq(desktop) {
+      width: 139px;
+      height: 211px;
+    }
   }
-}
 
-.services__image--roller {
-  bottom: 13px;
-  right: 0;
-  width: 272px;
-  height: 154px;
+  &--sprayer {
+    bottom: 0;
+    left: 0;
 
-  @include mq(tablet) {
-    width: 334px;
-    height: 163px;
+    @include mq(tablet) {
+      width: 334px;
+      height: 219px;
+    }
+    @include mq(desktop) {
+      bottom: 22px;
+      width: 280px;
+      height: 200px;
+    }
   }
-  @include mq(desktop) {
-    bottom: 26px;
-    width: 280px;
-    height: 163px;
-  }
-}
 
-.services__image--chair {
-  bottom: 14px;
-  right: 45px;
-  width: 171px;
-  height: 178px;
-
-  @include mq(tablet) {
+  &--roller {
     bottom: 13px;
-    right: 35px;
-    width: 189px;
-    height: 197px;
+    right: 0;
+    width: 272px;
+    height: 154px;
+
+    @include mq(tablet) {
+      width: 334px;
+      height: 163px;
+    }
+    @include mq(desktop) {
+      bottom: 26px;
+      width: 280px;
+      height: 163px;
+    }
   }
-  @include mq(desktop) {
+
+  &--chair {
     bottom: 14px;
-    right: 12px;
-    width: 183px;
-    height: 191px;
+    right: 45px;
+    width: 171px;
+    height: 178px;
+
+    @include mq(tablet) {
+      bottom: 13px;
+      right: 35px;
+      width: 189px;
+      height: 197px;
+    }
+    @include mq(desktop) {
+      bottom: 14px;
+      right: 12px;
+      width: 183px;
+      height: 191px;
+    }
   }
 }

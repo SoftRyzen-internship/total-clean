@@ -79,4 +79,4 @@ refs.card4.addEventListener('click', () => {
 document.addEventListener('keydown', handleKey);
 refs.backdrop.addEventListener('mousedown', handleClose);
 refs.closeModalBtn.addEventListener('click', onClickButtonCloseModal);
-refs.modalBtn.addEventListener('click', () => toggleModal());
+refs.modalBtn.addEventListener('click', onClickButtonCloseModal);

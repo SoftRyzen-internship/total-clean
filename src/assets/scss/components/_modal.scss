@@ -29,7 +29,7 @@
   transform: translate(-50%, -50%) scale(1);
 
   padding: 16px;
-  min-width: 272px;
+  max-width: 272px;
 
   background-color: var(--white);
   border-radius: 20px;
@@ -44,7 +44,7 @@
 
   @include mq(tablet) {
     padding: 60px 60px 40px 60px;
-    min-width: 418px;
+    max-width: 618px;
   }
 
   .is-hidden & {
