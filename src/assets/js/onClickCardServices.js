@@ -14,7 +14,7 @@ const refs = {
   card4: document.getElementById('card4'),
 };
 
-function toggleModal() {
+export function toggleModal() {
   document.body.classList.toggle('scroll-hidden');
   refs.modal.classList.toggle('is-hidden');
   refs.modalWindow.classList.toggle('is-hidden');

@@ -25,6 +25,13 @@
   }
 }
 
+.menu-backdrop {
+  position: absolute;
+  top: 0;
+
+  opacity: 0;
+}
+
 .mobile-menu .nav-list {
   margin-top: 8px;
 

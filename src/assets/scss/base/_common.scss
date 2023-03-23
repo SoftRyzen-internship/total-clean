@@ -89,6 +89,7 @@ button {
   color: var(--primary-txt-cl);
 
   @include mq(tablet) {
+    margin-right: -40px;
     display: inline-flex;
     align-items: flex-end;
 
@@ -107,21 +108,6 @@ button {
   }
 }
 
-// .subtitle {
-//   font-size: 16px;
-//   font-weight: 500;
-//   line-height: 1.5;
-
-//   text-align: center;
-
-//   color: var(--secondary-txt-cl);
-
-//   @include mq(tablet) {
-//     font-size: 22px;
-//     line-height: 1.36;
-//   }
-// }
-
 .logo {
   display: flex;
   align-items: center;
@@ -133,6 +119,21 @@ button {
   text-transform: capitalize;
 
   color: var(--accent-cl);
+
+  &::before {
+    content: '';
+    width: 32px;
+    height: 32px;
+
+    background-image: url('../../assets/images/icon-logo-mobile.svg');
+
+    @include mq(tablet) {
+      width: 44px;
+      height: 39px;
+
+      background-image: url('../../assets/images/icon-logo.svg');
+    }
+  }
 
   @include mq(tablet) {
     font-size: 18px;

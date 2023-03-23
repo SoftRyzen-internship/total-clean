@@ -9,7 +9,6 @@ const swiper = new Swiper('.swiper', {
 
   freeMode: true,
   speed: 800,
-  loop: true,
 
   // effect: 'coverflow',
   // preloadImages: false,
