@@ -4,11 +4,12 @@
   text-align: center;
 
   @include mq(tablet) {
+    padding-left: 40px;
     justify-content: center;
     margin-bottom: 40px;
   }
   @include mq(desktop) {
-    margin-bottom: 50px;
+    margin-bottom: 60px;
   }
 }
 
