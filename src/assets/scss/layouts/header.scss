@@ -1,6 +1,6 @@
 .header {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 16px;
+  padding-bottom: 16px;
 
   display: flex;
   justify-content: space-between;
@@ -9,6 +9,11 @@
   font-weight: 500;
 
   color: var(--primary-txt-cl);
+
+  @include mq(tablet) {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
 }
 
 .header > .phone {
@@ -25,6 +30,16 @@
   line-height: 1;
 
   transition: opacity var(--slow) linear;
+
+  svg {
+    width: 24px;
+    height: 24px;
+
+    @include mq(tablet) {
+      width: 32px;
+      height: 32px;
+    }
+  }
 
   @include mq(desktop) {
     display: none;
