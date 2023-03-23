@@ -2,17 +2,27 @@
   padding-top: 40px;
   background-image: linear-gradient(
     to bottom,
-    var(--secondary-accent-cl) 60%,
-    var(--white) 60%,
+    var(--secondary-accent-cl) 498px,
+    var(--white) 498px,
     var(--white) 100%
   );
+
+  @include mq(tablet) {
+    padding-top: 60px;
+    background-image: linear-gradient(
+      to bottom,
+      var(--secondary-accent-cl) 740px,
+      var(--white) 740px,
+      var(--white) 100%
+    );
+  }
 
   @include mq(desktop) {
     padding-top: 80px;
     background-image: linear-gradient(
       to bottom,
-      var(--secondary-accent-cl) 72%,
-      var(--white) 72%,
+      var(--secondary-accent-cl) 620px,
+      var(--white) 620px,
       var(--white) 100%
     );
   }
