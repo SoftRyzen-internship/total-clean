@@ -12,11 +12,6 @@ export function togglePopup() {
   document.body.classList.toggle('scroll-hidden');
   refs.backdrop.classList.toggle('is-hidden');
   refs.popup.classList.toggle('is-hidden');
-
-  refs.popupTitle.textContent = 'Thank you!';
-  refs.popupSubtitle.textContent = 'We have received your application and will be in touch soon';
-  refs.popupBtn.textContent = 'Got it';
-  refs.popupContent.classList.replace('popup-underConstruction', 'popup-content');
 }
 
 function handleKey(e) {
