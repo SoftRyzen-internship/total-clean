@@ -1,4 +1,5 @@
 import { togglePopup } from './popup';
+import { renderPopupMarkup } from './renderPopupMarkup';
 
 const refs = {
   popupContent: document.querySelector('.popup-content'),
@@ -6,15 +7,13 @@ const refs = {
   popupTitle: document.querySelector('.popup__title'),
   popupSubtitle: document.querySelector('.popup__subtitle'),
   popupBtn: document.querySelector('.popup__btn'),
+  popupContent: document.querySelector('.popup-content'),
 };
 
 refs.socialMedia.addEventListener('click', e => {
   if (e.target.tagName !== 'UL') {
-    togglePopup();
-
-    refs.popupTitle.textContent = 'This page is under construction';
-    refs.popupSubtitle.textContent = "Sorry for the inconvenience! We'll be with you soon.";
+    refs.popupContent.innerHTML = renderPopupMarkup('underConstruction');
     refs.popupBtn.textContent = 'Back to Home Page';
-    refs.popupContent.classList.replace('popup-content', 'popup-underConstruction');
+    togglePopup();
   }
 });

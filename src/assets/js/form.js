@@ -1,10 +1,14 @@
 import { togglePopup } from './popup';
+import { renderPopupMarkup } from './renderPopupMarkup';
 
 const form = document.getElementById('form');
 const sendBtn = document.querySelector('.contact__send-btn');
 
 const username = document.getElementById('name');
 const phone = document.getElementById('telephone');
+
+const popupContent = document.querySelector('.popup-content');
+const popupBtn = document.querySelector('.popup__btn');
 
 // SET DISABLED BUTTON
 sendBtn.setAttribute('disabled', 'disabled');
@@ -50,6 +54,8 @@ form.addEventListener('submit', e => {
 
   if (isValidValues.name === true && isValidValues.phone === true) {
     e.currentTarget.reset();
+    popupContent.innerHTML = renderPopupMarkup('form');
+    popupBtn.textContent = 'Got it';
     togglePopup();
 
     isValidValues.name = false;
