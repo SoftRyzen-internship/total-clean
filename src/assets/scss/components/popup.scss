@@ -29,7 +29,8 @@
   transform: translate(-50%, -50%) scale(1);
 
   padding: 16px;
-  max-width: 272px;
+  min-width: 272px;
+  min-height: 572px;
 
   background-image: linear-gradient(
     to bottom,
@@ -49,7 +50,7 @@
 
   @include mq(tablet) {
     padding: 24px;
-    max-width: 618px;
+    min-width: 618px;
     background-image: linear-gradient(
       to bottom,
       var(--secondary-accent-cl) 256px,
@@ -112,6 +113,9 @@
   display: block;
   text-align: center;
   margin-bottom: 16px;
+
+  font-size: 36px;
+  line-height: 1.11;
 }
 
 .popup__subtitle {
@@ -128,12 +132,31 @@
 }
 
 .popup__btn {
-  padding: 16px 98.5px;
+  // padding: 16px 98.5px;
   margin: 0 auto;
   margin-top: 24px;
 
   @include mq(tablet) {
-    padding: 18px 98.5px;
+    // padding: 18px 98.5px;
     margin-top: 40px;
+  }
+}
+
+.popup-underConstruction::before {
+  content: '';
+  display: block;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 60px;
+  width: 240px;
+  height: 123px;
+  background-image: url('../../assets/images/underConstruction.svg');
+  background-size: contain;
+
+  @include mq(tablet) {
+    margin-top: 0;
+    margin-bottom: 90px;
+    width: 380px;
+    height: 196px;
   }
 }

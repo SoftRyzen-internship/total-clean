@@ -2,13 +2,21 @@ const refs = {
   closePopupBtn: document.querySelector('[data-popup-close]'),
   backdrop: document.querySelector('[data-popup]'),
   popup: document.querySelector('.popup'),
+  popupContent: document.querySelector('.popup-content'),
   popupBtn: document.querySelector('.popup__btn'),
+  popupTitle: document.querySelector('.popup__title'),
+  popupSubtitle: document.querySelector('.popup__subtitle'),
 };
 
 export function togglePopup() {
   document.body.classList.toggle('scroll-hidden');
   refs.backdrop.classList.toggle('is-hidden');
   refs.popup.classList.toggle('is-hidden');
+
+  refs.popupTitle.textContent = 'Thank you!';
+  refs.popupSubtitle.textContent = 'We have received your application and will be in touch soon';
+  refs.popupBtn.textContent = 'Got it';
+  refs.popupContent.classList.replace('popup-underConstruction', 'popup-content');
 }
 
 function handleKey(e) {
