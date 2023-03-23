@@ -43,7 +43,7 @@
   @include mq(desktop) {
     display: flex;
     flex-direction: row-reverse;
-    min-width: 947px;
+    max-width: 947px;
     padding: 40px;
   }
 }
