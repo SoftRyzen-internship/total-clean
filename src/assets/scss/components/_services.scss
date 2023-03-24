@@ -153,7 +153,7 @@
 }
 
 .services__bgcard2 {
-  bottom: 80px;
+  bottom: 100px;
   left: 0%;
   transform: translateX(0%);
 
@@ -167,6 +167,11 @@
   );
   background-position-y: 0px;
 
+  @include mq(tablet) {
+    width: 60px;
+    height: 60px;
+  }
+
   .services__item.clicked & {
     transform: translateX(0%) scale(15);
     transform-origin: center;
@@ -174,13 +179,18 @@
 }
 
 .services__bgcard3 {
-  bottom: 35px;
+  bottom: 70px;
   left: 100%;
   transform: translateX(-100%);
 
   width: 50px;
   height: 50px;
   background-position-y: 0px;
+
+  @include mq(tablet) {
+    width: 50px;
+    height: 50px;
+  }
 
   .services__item.clicked & {
     transform: translateX(-100%) scale(18);
@@ -211,7 +221,7 @@
   }
 
   .services__item.clicked & {
-    transform: translateX(-100%) scale(5);
+    transform: translateX(-100%) scale(10);
     transform-origin: center;
   }
 }

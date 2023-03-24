@@ -24,9 +24,9 @@
   opacity: 1;
 
   position: absolute;
-  top: 50%;
+  top: 24px;
   left: 50%;
-  transform: translate(-50%, -50%) scale(1);
+  transform: translateX(-50%) scale(1);
 
   padding: 16px;
   width: 272px;
@@ -44,6 +44,10 @@
   }
 
   @include mq(tablet) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+
     padding: 60px 60px 40px 60px;
     width: 618px;
     max-width: 618px;
@@ -55,6 +59,10 @@
 }
 
 .modal__close-icon {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+
   width: 24px;
   height: 24px;
   display: flex;
@@ -62,14 +70,11 @@
   justify-content: center;
   stroke: var(--primary-txt-cl);
   fill: var(--white);
-
-  position: absolute;
-  right: 16px;
-  top: 16px;
   cursor: pointer;
+
   &:hover,
   &:focus {
-    stroke: var(--accent-cl);
+    color: var(--accent-cl);
   }
 
   @include mq(tablet) {

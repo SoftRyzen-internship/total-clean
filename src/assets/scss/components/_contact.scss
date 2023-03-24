@@ -98,6 +98,9 @@
 
   @include mq(tablet) {
     padding: 18px 101px;
+    margin-top: 28px;
+  }
+  @include mq(desktop) {
     margin-top: 40px;
   }
 
@@ -209,7 +212,7 @@
   @include mq(tablet) {
     position: relative;
     margin-top: 40px;
-    padding: 24px 24px 30px 24px;
+    padding: 24px;
   }
   @include mq(desktop) {
     max-width: 345px;

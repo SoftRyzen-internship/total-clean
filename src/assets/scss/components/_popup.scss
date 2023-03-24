@@ -117,7 +117,7 @@
   cursor: pointer;
   &:hover,
   &:focus {
-    stroke: var(--accent-cl);
+    color: var(--accent-cl);
   }
 
   @include mq(tablet) {
