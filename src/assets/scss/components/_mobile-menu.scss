@@ -49,6 +49,13 @@
 .close-btn {
   margin: 16px 16px 0 auto;
 
+  transition: color var(--fast) linear;
+
+  &:hover,
+  &:focus {
+    color: var(--accent-cl);
+  }
+
   @include mq(tablet){
     margin: 24px 24px 0 auto;
   }
@@ -63,6 +70,15 @@
   gap: 16px;
 
   background-color: var(--accent-cl);
+
+  &:hover,
+  &:focus {
+    background-color: var(--hover-btn);
+  }
+
+  &:active {
+    background-color: var(--active-btn);
+  }
 
   @include mq(tablet){
     padding: 26px 38px;
