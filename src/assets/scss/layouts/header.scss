@@ -19,6 +19,13 @@
 .header > .phone {
   display: none;
 
+  &:focus,
+  &:hover {
+    color: var(--accent-cl);
+
+    transition: color var(--fast) linear;
+  }
+
   @include mq(desktop) {
     display: flex;
     align-items: center;
@@ -29,7 +36,12 @@
 .burger-menu{
   line-height: 1;
 
-  transition: opacity var(--slow) linear;
+  transition: opacity var(--slow) linear, color var(--fast) linear;
+
+  &:hover,
+  &:focus {
+    color: var(--accent-cl);
+  }
 
   svg {
     width: 24px;

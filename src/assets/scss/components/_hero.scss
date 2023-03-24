@@ -1,32 +1,37 @@
 .hero {
   background-color: var(--primary-bg);
 
-  background-image: url('../../assets/images/hero/hero-mb@1x.png');
-  background-repeat: no-repeat;
-  background-position: top 20px center;
-  background-size: 227px 174.6px;
 
-  @include mq(retina){
-    background-image: url('../../assets/images/hero/hero-mb@2x.png');
+  @include mq(mobile) {
+    background-image: url('../images/hero/hero-mb@1x.png');
+    background-repeat: no-repeat;
+    background-position: top 20px center;
+    background-size: 227px 174.6px;
+
+    @include mq(retina){
+      background-image: url('../images/hero/hero-mb@2x.png');
+    }
   }
 
   @include mq(tablet) {
-    background-image: url('../../assets/images/hero/hero-tb@1x.png');
+    background-image: url('../images/hero/hero-tb@1x.png');
     background-position: center left 52.4vw;
     background-size: 601px 500px;
+    background-repeat: no-repeat;
 
     @include mq(retina){
-      background-image: url('../../assets/images/hero/hero-tb@2x.png');
+      background-image: url('../images/hero/hero-tb@2x.png');
     }
   }
 
   @include mq(desktop) {
-    background-image: url('../../assets/images/hero/hero-dt@1x.png');
+    background-image: url('../images/hero/hero-dt@1x.png');
     background-position: center left 48.5vw;
     background-size: 656px 548px;
+    background-repeat: no-repeat;
 
     @include mq(retina){
-      background-image: url('../../assets/images/hero/hero-dt@2x.png');
+      background-image: url('../images/hero/hero-dt@2x.png');
     }
   }
 }
