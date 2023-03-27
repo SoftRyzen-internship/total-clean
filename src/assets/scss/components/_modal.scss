@@ -10,7 +10,7 @@
   backdrop-filter: blur(2px);
   z-index: 100;
   overflow: auto;
-  transition: opacity 0.2s;
+  transition: opacity var(--slow);
 
   &.is-hidden {
     visibility: hidden;

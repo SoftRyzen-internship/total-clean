@@ -1,5 +1,9 @@
 .reviews {
   text-align: center;
+
+  @include mq(tablet-only){
+    max-width: 100%;
+  }
 }
 
 .reviews-list {
@@ -24,6 +28,10 @@
   overflow: hidden;
 
   color: var(--primary-txt-cl);
+
+  @include mq(tablet-only){
+    max-width: 280px;
+  }
 }
 
 .review-content {

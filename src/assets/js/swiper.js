@@ -3,21 +3,8 @@ import Swiper, { Pagination } from 'swiper';
 const swiper = new Swiper('.swiper', {
   modules: [Pagination],
 
-  // autoplay: {
-  //   delay: 3000,
-  // },
-
   freeMode: true,
   speed: 800,
-
-  // effect: 'coverflow',
-  // preloadImages: false,
-
-  // coverflowEffect: {
-  //   rotate: 20,
-  //   stretch: 50,
-  //   slideShadows: true,
-  // },
 
   pagination: {
     el: '.swiper-pagination',
@@ -28,6 +15,7 @@ const swiper = new Swiper('.swiper', {
 
   slideToClickedSlide: true,
   watchOverflow: true,
+
   breakpoints: {
     320: {
       slidesPerView: 1,
@@ -35,25 +23,19 @@ const swiper = new Swiper('.swiper', {
       slidesPerGroup: 1,
     },
     768: {
-      slidesPerView: 2.4,
+      slidesPerView: 'auto',
       spaceBetween: 32,
       slidesPerGroup: 2,
+    },
+    968: {
+      slidesPerView: 'auto',
+      spaceBetween: 32,
+      slidesPerGroup: 3,
     },
     1280: {
       slidesPerView: 4,
       spaceBetween: 32,
       slidesPerGroup: 4,
     },
-  },
-
-  keyboard: {
-    enabled: true,
-    onlyInViewport: true,
-    pageUpDown: true,
-  },
-
-  mousewheel: {
-    sensitivity: true,
-    eventsTarget: '.swiper',
   },
 });
