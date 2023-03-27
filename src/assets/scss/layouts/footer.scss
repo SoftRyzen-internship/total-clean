@@ -2,14 +2,13 @@
   padding: 32px 0;
   background-color: var(--primary-bg);
 
-  .nav-item:hover::after {
+  .nav-item::after {
     bottom: -4px;
   }
 
   @include mq(desktop) {
     padding: 40px 0;
   }
-
 }
 
 .footer-meta {
