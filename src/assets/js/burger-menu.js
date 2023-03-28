@@ -22,13 +22,13 @@ backdrop.addEventListener('click', e => {
 const closeMenu = () => {
   mobileMenu.style.transform = 'translateX(100%)';
   burgerBtn.style.opacity = 1;
-  backdrop.classList.remove('backdrop');
+  backdrop.classList.add('is-hidden');
   document.body.classList.remove('scroll-hidden');
 };
 
 const openMenu = () => {
   mobileMenu.style.transform = 'translateX(0)';
   burgerBtn.style.opacity = 0;
-  backdrop.classList.add('backdrop');
+  backdrop.classList.remove('is-hidden');
   document.body.classList.add('scroll-hidden');
 };

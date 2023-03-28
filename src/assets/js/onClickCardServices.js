@@ -1,7 +1,7 @@
 import { renderModalMarkup } from './renderModalMarkup';
 
 const refs = {
-  backdrop: document.querySelector('.backdrop'),
+  backdrop: document.querySelector('[data-modal]'),
   openModalBtn: document.querySelector('[data-modal-open]'),
   closeModalBtn: document.querySelector('[data-modal-close]'),
   modal: document.querySelector('[data-modal]'),
@@ -55,25 +55,25 @@ function onClickButtonCloseModal() {
 refs.card1.addEventListener('click', () => {
   refs.card1.classList.add('clicked');
   refs.content.innerHTML = renderModalMarkup(1);
-  setTimeout(toggleModal, 200);
+  setTimeout(toggleModal, 100);
 });
 
 refs.card2.addEventListener('click', () => {
   refs.card2.classList.add('clicked');
   refs.content.innerHTML = renderModalMarkup(2);
-  setTimeout(toggleModal, 200);
+  setTimeout(toggleModal, 100);
 });
 
 refs.card3.addEventListener('click', () => {
   refs.card3.classList.add('clicked');
   refs.content.innerHTML = renderModalMarkup(3);
-  setTimeout(toggleModal, 200);
+  setTimeout(toggleModal, 100);
 });
 
 refs.card4.addEventListener('click', () => {
   refs.card4.classList.add('clicked');
   refs.content.innerHTML = renderModalMarkup(4);
-  setTimeout(toggleModal, 200);
+  setTimeout(toggleModal, 100);
 });
 
 document.addEventListener('keydown', handleKey);

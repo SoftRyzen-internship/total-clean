@@ -10,7 +10,7 @@
   backdrop-filter: blur(2px);
   z-index: 100;
   overflow: auto;
-  transition: opacity 0.2s;
+  transition: opacity var(--slow) linear, visibility var(--slow) linear;
 
   &.is-hidden {
     visibility: hidden;
@@ -40,7 +40,7 @@
   );
   border-radius: 20px;
 
-  transition: transform 0.3s linear 0.2s;
+  transition: transform 0.3s linear, opacity var(--slow) linear, visibility var(--slow) linear;
 
   &.is-hidden {
     visibility: hidden;
@@ -61,7 +61,7 @@
   }
 
   .is-hidden & {
-    transform: translate(-50%, -50%) scale(0.5);
+    transform: translate(-50%, -50%) scale(0.3);
   }
 }
 
@@ -115,6 +115,9 @@
   right: 16px;
   top: 16px;
   cursor: pointer;
+
+  transition: color var(--fast) linear;
+
   &:hover,
   &:focus {
     color: var(--accent-cl);
