@@ -1,34 +1,26 @@
 .hero {
+  position: relative;
+
+  overflow: hidden;
+
   background-color: var(--primary-bg);
 
-  background-image: url('../images/hero/hero-mb@1x.png');
-  background-repeat: no-repeat;
-  background-position: top 20px center;
-  background-size: 227px 174.6px;
+  // background-image: url('../images/hero/lady.svg');
+  // background-repeat: no-repeat;
+  // background-position: top 20px center;
+  // background-size: 227px 174.6px;
 
-  @include mq(retina){
-    background-image: url('../images/hero/hero-mb@2x.png');
-  }
+  // @include mq(tablet) {
+  //   background-image: url('../images/hero/lady.svg');
+  //   background-position: center left 52.4vw;
+  //   background-size: 601px 500px;
+  // }
 
-  @include mq(tablet) {
-    background-image: url('../images/hero/hero-tb@1x.png');
-    background-position: center left 52.4vw;
-    background-size: 601px 500px;
-
-    @include mq(retina){
-      background-image: url('../images/hero/hero-tb@2x.png');
-    }
-  }
-
-  @include mq(desktop) {
-    background-image: url('../images/hero/hero-dt@1x.png');
-    background-position: center left 48.5vw;
-    background-size: 656px 548px;
-
-    @include mq(retina){
-      background-image: url('../images/hero/hero-dt@2x.png');
-    }
-  }
+  // @include mq(desktop) {
+  //   background-image: url('../images/hero/lady.svg');
+  //   background-position: center left 48.5vw;
+  //   background-size: 656px 548px;
+  // }
 }
 
 .hero-meta {
@@ -93,5 +85,54 @@
 
     font-size: 22px;
     line-height: 1.36;
+  }
+}
+
+.bubble-bg {
+  position: absolute;
+  top: 0;
+  width: 272px;
+  height: 220px;
+
+  @include mq(tablet) {
+    left: 52.4vw;
+    width: 600px;
+    height: 600px;
+  }
+
+  @include mq(desktop) {
+    left: 48.5vw;
+    width: 700px;
+    height: 700px;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 24px;
+    right: 75px;
+
+    width: 120px;
+    height: 152px;
+
+    background-image: url('../images/hero/lady.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    @include mq(tablet-only) {
+      top: 120px;
+      left: 43px;
+
+      width: 294px;
+      height: 395px;
+    }
+
+    @include mq(desktop) {
+      top: 130px;
+      right: 175px;
+
+      width: 336px;
+      height: 451px;
+    }
   }
 }

@@ -23,24 +23,25 @@
   bottom: -4px;
 
   display: block;
-  width: 100%;
+  width: 0;
   height: 2px;
 
   border-radius: 2px;
 
-  transition: background-color var(--fast) linear;
+  transition: background-color var(--fast) linear, width var(--fast) linear;
 
   @include mq(tablet) {
     height: 4px;
   }
 
   @include mq(desktop) {
-    bottom: -26px;
+    bottom: -25px;
   }
 }
 
 .nav-item:hover {
   &::after {
     background-color: var(--accent-cl);
+    width: 100%;
   }
 }
