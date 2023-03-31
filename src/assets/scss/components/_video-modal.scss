@@ -1,10 +1,14 @@
 .video-modal {
+  visibility: visible;
+  opacity: 1;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 
   background-color: var(--primary-txt-cl);
+
+  transition: visibility var(--fast) linear;
 
   &::after {
     content: '';
@@ -20,6 +24,12 @@
     border: 6px solid var(--secondary-accent-cl);
     border-color: var(--secondary-accent-cl) transparent var(--secondary-accent-cl) transparent;
     animation: spinner 1.2s linear infinite;
+  }
+
+  &.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
   }
 }
 
