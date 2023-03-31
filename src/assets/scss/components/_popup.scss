@@ -10,7 +10,7 @@
   backdrop-filter: blur(2px);
   z-index: 100;
   overflow: auto;
-  transition: opacity var(--slow) linear, visibility var(--slow) linear;
+  transition: opacity var(--fast) linear, visibility var(--fast) linear;
 
   &.is-hidden {
     visibility: hidden;
@@ -40,7 +40,7 @@
   );
   border-radius: 20px;
 
-  transition: transform 0.3s linear, opacity var(--slow) linear, visibility var(--slow) linear;
+  transition: transform 0.3s linear, opacity var(--fast) linear, visibility var(--fast) linear;
 
   &.is-hidden {
     visibility: hidden;
@@ -61,7 +61,7 @@
   }
 
   .is-hidden & {
-    transform: translate(-50%, -50%) scale(0.3);
+    transform: translate(-50%, -50%) scale(0.7);
   }
 }
 

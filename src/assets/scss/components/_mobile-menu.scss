@@ -30,6 +30,10 @@
   top: 0;
 }
 
+.menu-backdrop.backdrop.is-hidden {
+  transition-delay: 0.2s;
+}
+
 .mobile-menu .nav-list {
   margin-top: 8px;
 

@@ -1,4 +1,5 @@
 const backdrop = document.querySelector('[data-video-modal]');
+const videoModal = document.querySelector('.video-modal');
 const modal = document.querySelector('.video-content');
 const reviewsList = document.querySelector('.reviews-list');
 const closePopupBtn = document.querySelector('.video-close-btn');
@@ -24,6 +25,7 @@ reviewsList.addEventListener('click', e => {
 function toggleModal() {
   document.body.classList.toggle('scroll-hidden');
   backdrop.classList.toggle('is-hidden');
+  videoModal.classList.toggle('is-hidden');
 
   if (backdrop.classList.contains('is-hidden')) {
     modal.innerHTML = '';
